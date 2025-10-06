@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e0f7fa; /* light aqua */
+    color: #097b68; /* dark teal */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #17c1c6;
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.7s ease forwards;
+    opacity: 0;
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+   
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #07ea71;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav:hover {
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #07ea71;
+    border-bottom: 2px solid #1aa15b;
+}
+
+/* Sections */
+section {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    background-color: #e0fdfa;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 188, 212, 0.2);
+}
+
+
+section:hover {
+    background-color: #f1fcfd;
+}
+
+/* Headings */
+h1, h2 {
+    color: #006407;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 188, 212, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Resume Button */
+.resume-btn {
+    display: block;
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 24px;
+    margin: 20px auto 0;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #0feb79;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    object-fit: cover;
+    border: 1px solid #b30c0c;
+}
+#contact a {
+    display: inline-block;
+    margin: 8px 0;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #0feb79;
+    text-decoration: underline;
+}

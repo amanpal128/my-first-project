@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aman Pal - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d72f49db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <img src="./profile.jpg" alt="Profile Picture" class="profile-img" />
+    <h1>Namaste! I'm <span class="highlight">Aman Pal</span></h1>
+    <p class="subtitle">Web Developer | Designer | Learner</p>
+    <a href="resume.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-cards">
+    <div class="card">🌐 Portfolio Website</div>
+    <div class="card">☁ Weather App</div>
+    <div class="card">🛒 Amazon Clone</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:aamanpal050@gmail.com">aamanpal050@gmail.com</a></p>
+  <p>Phone: +91 6306465548</p>
+  <p><a href="https://wa.me/+916306465548" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></p>
+  <p><a href="https://instagram.com/brandaman128" target="_blank"><i class="fab fa-instagram"></i> Follow on Instagram</a></p>
+</section>
+
+<script>
+  // Smooth scroll behavior
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
